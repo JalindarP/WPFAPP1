@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MySchool" Height="500" Width="1000" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="_menuStyle" TargetType="MenuItem">
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter  Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="Auto" VerticalAlignment="Top">
+            <MenuItem  Header="Student" Style="{StaticResource _menuStyle}" Command="{Binding StudentMenuItemClickCommand}" CommandParameter="StudentView"></MenuItem>
+            <MenuItem  Header="Library" Style="{StaticResource _menuStyle}"></MenuItem>
+        </Menu>
+        <Grid DockPanel.Dock="Bottom" Height="Auto" Width="Auto" x:Name="Content">
+           
+        </Grid>
+    </DockPanel>
+
+
+
+</Window>
